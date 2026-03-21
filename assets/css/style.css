@@ -1,0 +1,158 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root {
+  /* Colors */
+  --color-background: #1E1E1E;
+  --color-surface: #2A2A2A;
+  --color-white: #FFFFFF;
+  --color-black: #000000;
+  --color-primary: #125146;
+  --color-primary-light: #1A6A5A;
+  --color-border: #3A3A3A;
+  --color-muted: #A0A0A0;
+
+  /* Typography */
+  --font-family-base: 'Roboto', sans-serif;
+
+  --font-size-xs: 12px;
+  --font-size-sm: 14px;
+  --font-size-md: 16px;
+  --font-size-lg: 20px;
+  --font-size-xl: 24px;
+
+  --font-weight-light: 300;
+  --font-weight-regular: 400;
+  --font-weight-medium: 500;
+  --font-weight-bold: 700;
+
+  /* Spacing (padding / margin) */
+  --spacing-xs: 4px;
+  --spacing-sm: 8px;
+  --spacing-md: 16px;
+  --spacing-lg: 24px;
+  --spacing-xl: 32px;
+
+  /* Border Radius */
+  --radius-sm: 6px;
+  --radius-md: 10px;
+  --radius-lg: 16px;
+  --radius-full: 999px;
+
+  /* Shadows */
+  --shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.2);
+  --shadow-md: 0 4px 10px rgba(0, 0, 0, 0.3);
+  --shadow-lg: 0 10px 25px rgba(0, 0, 0, 0.4);
+
+  /* Transitions */
+  --transition-fast: 0.2s ease-in-out;
+  --transition-normal: 0.3s ease-in-out;
+
+  /* Layout */
+  --container-width: 1200px;
+}
+
+/* CSS RESET BASE */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  height: 100%;
+}
+
+body {
+  font-family: var(--font-family-base);
+  background: var(--color-background);
+  color: var(--color-white);
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Media */
+img, picture, video, canvas {
+  display: block;
+  max-width: 100%;
+}
+
+/* Text */
+input, button, textarea, select {
+  font: inherit;
+  color: inherit;
+}
+
+/* Links */
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Lists */
+ul, ol {
+  list-style: none;
+}
+
+/* BUTTON RESET */
+button {
+  all: unset; /* remove TODOS estilos nativos */
+  cursor: pointer;
+  display: inline-block;
+  text-align: center;
+}
+
+/* INPUT RESET */
+input, textarea {
+  all: unset;
+  display: block;
+  width: 100%;
+}
+
+/* SELECT RESET */
+select {
+  all: unset;
+  cursor: pointer;
+}
+
+/* FORM ELEMENT BASE STYLE */
+input, textarea, select {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  padding: var(--spacing-sm) var(--spacing-md);
+  border-radius: var(--radius-sm);
+  transition: var(--transition-fast);
+}
+
+/* FOCUS STATES */
+input:focus, textarea:focus, select:focus {
+  border-color: var(--color-primary);
+  box-shadow: 0 0 0 2px rgba(18, 81, 70, 0.3);
+}
+
+/* DISABLED */
+input:disabled, button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* BUTTON BASE STYLE */
+button {
+  background: var(--color-primary);
+  color: var(--color-white);
+  padding: var(--spacing-sm) var(--spacing-md);
+  border-radius: var(--radius-sm);
+  transition: var(--transition-fast);
+}
+
+button:hover {
+  opacity: 0.9;
+}
+
+button:active {
+  transform: scale(0.97);
+}
