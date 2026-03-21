@@ -335,24 +335,31 @@ body {
 }
 
 /* Responsive */
-@media (max-width: 992px) {
-  .auth-container {
-    flex-direction: column;
-    min-height: auto;
+@media (max-width: 1024px) {
+  .auth-illustration {
+    display: none; /* Hide left section on tablets and mobile */
   }
   
-  .auth-illustration {
-    padding: var(--spacing-lg);
+  .auth-container {
+    min-height: auto;
+    width: 100%;
+    max-width: 500px;
+    margin: 0 auto;
+    border-radius: var(--radius-lg); /* Add radius back on mobile if it was removed */
   }
 }
 
 @media (max-width: 576px) {
+  .auth-wrapper {
+    padding: var(--spacing-sm);
+  }
+  
+  .auth-form-container {
+    padding: var(--spacing-lg) var(--spacing-md);
+  }
+
   .form-row {
     flex-direction: column;
     gap: 0;
-  }
-  
-  .step-cards {
-    flex-direction: column;
   }
 }
